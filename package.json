@@ -1,0 +1,16 @@
+{
+  "name": "topologygeneratorelectron",
+  "version": "1.0.0",
+  "description": "network topology generator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.7"
+  },
+  "dependencies": {
+    "d3": "^5.14.2"
+  }
+}
