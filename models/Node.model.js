@@ -1,12 +1,16 @@
 'use strict';
 
 class Node {
+    static nodeCounter = 0;
+
+    id;
     name;
     posX;
     posY;
     degree;
 
     constructor(id, posX, posY) {
+        this.id = id;
         this.name = 'R' + id;
         this.posX = posX;
         this.posY = posY;
@@ -36,7 +40,8 @@ class Node {
     static Generate(nbr, width, height) {
         let nodeList = [];
         for(let i = 0; i < nbr; i++) {
-            let node = new Node(i + 1, getRandom(width - 24), getRandom(height - 34))
+            this.nodeCounter++;
+            let node = new Node(this.nodeCounter, getRandom(width - 24), getRandom(height - 34))
             nodeList[i] = node;
         }
         return nodeList;

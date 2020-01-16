@@ -29,19 +29,23 @@ class Link {
     static Generate(networkNodes) {
         let linkList = [];
         for(let i = 0; i < networkNodes.length; i++) {
-            let nodeSource = i;
+            let nodeSource = i + 1;
             let source = networkNodes[i].name;
             let nodeTarget;
             let target;
             if((i+1) >= networkNodes.length) {
-                nodeTarget = 1;
-                target = networkNodes[0].name;
+                // nodeTarget = 1;
+                // target = networkNodes[0].name;
+                // networkNodes[0].degree++;
+                break;
             } else {
-                nodeTarget = i + 1;
+                nodeTarget = i + 2;
                 target = networkNodes[i+1].name;
+                networkNodes[i + 1].degree++;
             }
+            networkNodes[i].degree++;
             let link = new Link(nodeSource, nodeTarget, source, target);
-            linkList[i] = link; 
+            linkList[i] = link;
         }
         return linkList;
     }

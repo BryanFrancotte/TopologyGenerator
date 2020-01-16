@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Network Generator</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="./photon.min.css">
@@ -11,7 +11,7 @@
   <body>
     <div class="window">
       <header class="toolbar toolbar-header">
-        <h1 class="title">Hello World!</h1>
+        <h1 class="title">Network Generator</h1>
         <div class="toolbar-actions">
           <button id="generateBtn" class="btn btn-positive">
             <span class="icon icon-shuffle icon-text"></span>
@@ -30,18 +30,16 @@
               <div class="form-group">
                 <label>Generation model</label>
                 <select class="form-control" id="generationMethod">
-                  <option>Random</option>
                   <option>Barabási–Albert</option>
-                  <option>Option three</option>
                 </select>
               </div>
               <div class="form-group">
                 <label>Number of node</label>
-                <input type="number" class="form-control" id="nodeNumber" placeholder="number node" value="10" min="2" max="200">
+                <input type="number" class="form-control" id="nodeNumber" placeholder="number node" value="20" min="3" max="200">
               </div>
               <div class="form-group">
                 <label>density of the topology: <span id="densityValue"></span></label>
-                <input type="range" min="1" max="10" value="1" id="density" class="slider">
+                <input type="range" min="2" max="10" value="1" id="density" class="slider">
               </div>
               <h2>Output:</h2>
               <p id="networkContent"></p>

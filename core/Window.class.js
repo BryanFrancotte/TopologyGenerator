@@ -18,7 +18,7 @@ class Window extends BrowserWindow {
 
         // load the html and open devtools
         this.loadFile(file);
-        this.webContents.openDevTools();
+        // this.webContents.openDevTools();
         this.removeMenu();
         // this.maximize();
 
