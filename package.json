@@ -12,6 +12,6 @@
     "electron-packager": "^14.1.1"
   },
   "dependencies": {
-    "d3": "^5.14.2"
+    "d3": "^7.6.1"
   }
 }
